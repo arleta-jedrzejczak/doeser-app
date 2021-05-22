@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-drug-list',
-  templateUrl: './drug-list.component.html',
+  selector: 'app-drug-list-item',
+  template: `<div>item</div>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DrugListComponent {}
+export class DrugListItemComponent {}
