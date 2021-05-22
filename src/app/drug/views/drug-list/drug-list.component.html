@@ -1,1 +1,4 @@
 <p>{{ 'drug-list.title' | transloco }}</p>
+<div *ngFor="let drug of drugList; trackBy: identify; let i = index">
+  <app-drug-list-item [drug]="drug"></app-drug-list-item>
+</div>

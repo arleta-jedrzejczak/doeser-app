@@ -19,6 +19,6 @@ export type DrugDosageType = {
   howManyHours?: string;
 };
 
-export type DrugDoseUnitType = 'PILL' | 'ML';
+export type DrugDoseUnitType = 'pill' | 'ml';
 
-export type ActiveUnitType = 'G' | 'ML';
+export type ActiveUnitType = 'g' | 'ml' | 'mg';

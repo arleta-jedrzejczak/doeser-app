@@ -11,4 +11,8 @@ export class DrugListComponent {
   readonly drugList: DrugType[] = this.activatedRoute.snapshot.data.drugList;
 
   constructor(private activatedRoute: ActivatedRoute) {}
+
+  identify(index: number, item: DrugType) {
+    return item.id;
+  }
 }

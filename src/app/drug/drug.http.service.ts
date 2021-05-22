@@ -15,12 +15,28 @@ export class DrugHttpService {
         id: '1',
         pack: {
           activeAmmount: '500',
-          activeUnitType: 'G',
+          activeUnitType: 'mg',
           drugName: 'Calperos',
+          producer: 'Teva Pharmaceuticals Polska'
         },
-        dosage: {doseAmount: 1,
+        dosage: {
+          doseAmount: 1,
           howOften: '24h',
-          doseAmountUnit: 'PILL'
+          doseAmountUnit: 'pill'
+        }
+      },
+      {
+        id: '2',
+        pack: {
+          activeAmmount: '100 + 10',
+          activeUnitType: 'mg',
+          drugName: 'Magne B6 Forte',
+          producer: 'Sanofi-Aventis Sp. z o.o.'
+        },
+        dosage: {
+          doseAmount: 1,
+          howOften: '24h',
+          doseAmountUnit: 'pill'
         }
       }
     ]);

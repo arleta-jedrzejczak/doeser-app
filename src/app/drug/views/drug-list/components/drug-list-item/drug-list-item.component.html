@@ -1,0 +1,34 @@
+<ng-container *transloco="let t; read: 'drug-list.item'">
+  <div class="card w-100 mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ drug.pack.drugName }}</h5>
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <ng-container
+            [ngTemplateOutlet]="valueTemplate"
+            [ngTemplateOutletContext]="{
+              value: (drug.pack.activeAmmount + drug.pack.activeUnitType),
+              label: 'active-substance'
+            }"
+          >
+          </ng-container>
+        </div>
+        <div class="col-12 col-lg-3">
+          <ng-container
+            [ngTemplateOutlet]="valueTemplate"
+            [ngTemplateOutletContext]="{
+              value: drug.pack.producer,
+              label: 'producer'
+            }"
+          >
+          </ng-container>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <ng-template #valueTemplate let-value="value" let-label="label">
+    <p class="small text-muted m-0">{{ t(label) }}</p>
+    <p *ngIf="value" class="card-text m-0">{{ value }}</p>
+  </ng-template>
+</ng-container>

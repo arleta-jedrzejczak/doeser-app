@@ -1,8 +1,11 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { DrugType } from '../../../../types';
 
 @Component({
   selector: 'app-drug-list-item',
-  template: `<div>item</div>`,
+  templateUrl: 'drug-list-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DrugListItemComponent {}
+export class DrugListItemComponent {
+  @Input() drug!: DrugType;
+}
